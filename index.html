@@ -1,18 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Portal</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  </head>
+  <body onload="fetchCategories()">
+
+    <header>
+      <header class="container-fluid m-0 p-0">
+        <!-- Navbar goes here -->
+        <nav class="navbar navbar-expand-lg bg-transparent">
+          <div class="container">
+            <a class="navbar-brand" href="#"><button class="btn btn-primary
+                rounded-0">News</button> Portal</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">News</a>
+                <a class="nav-link" href="#">Blogs</a>
+                <a class="nav-link" href="#"><img src="./assets/Avatar.png"
+                    alt=""
+                    /></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="container categories-container d-flex
+          justify-content-between" id="categories-container">
+
+        </section>
+        <div class="container my-4">
+          <div class="alert alert-dark" role="alert">
+            <span id="count"></span> items found for category <span
+              id="category"></span>
+          </div>
+        </div>
+        <!-- filter section  -->
+        <section>
+          <div class="container">
+            <div class="d-flex justify-content-between">
+              <div class="wrap d-flex justify-content-between
+                align-items-center">
+                <span>Sort By View:</span>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Default</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="right">
+                <button class="btn btn-info">Today’s Pick</button>
+                <button class="btn btn-light border-2">Trending</button>
+              </div>
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section>
+          <div class="container my-5" id="all-news">
     
+          </div>
+        </section>
+      </main>
 
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="js/main.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
+    </body>
+  </html>
